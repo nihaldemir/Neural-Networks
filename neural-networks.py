@@ -25,12 +25,22 @@ bias = 2
 
 # 1. for a neuron: add up all the inputs times weights plus bias
 
-output = inputs[0] * weights[0] + inputs[1] * weights[1] + inputs[2] * weights[2] +  inputs[3] * weights[3] + bias
+"""
+ output = inputs[0] * weights[0] + inputs[1] * weights[1] + inputs[2] * weights[2] +  inputs[3] * weights[3] + bias
 
 print(output)
 
+"""
 # P.2 Coding a Layer
 
 # inputs could either be truly input as in like values from the input layer of a neural network
 # which is just going to be a vector of values
+
+# 4 inputs into 3 neurons
+# it means there's going to be 3 unique weight sets (w 4 values) and 3 unique biases
+
+weights2 = [0.5, -0.91, 0.26, -0.5]
+weights3 = [-0.26, -0.27, 0.17, 0.87]
+bias2 = 3
+bias3 = 0.5
 
