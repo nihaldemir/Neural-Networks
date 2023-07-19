@@ -10,7 +10,7 @@ print("Matplotlib", matplotlib.__version__)
 
 # P.1 Neuron Code
 
-# there are 3 neurons that are feeding into this neuron that we are gonna build
+# there are 4 neurons that are feeding into this neuron that we are gonna build
 # neurons are outputting some values
 
 inputs = [1, 2, 3, 2.5]
