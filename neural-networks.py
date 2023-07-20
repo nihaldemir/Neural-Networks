@@ -49,3 +49,5 @@ output = [inputs[0] * weights[0] + inputs[1] * weights[1] + inputs[2] * weights[
           inputs[0] * weights3[0] + inputs[1] * weights3[1] + inputs[2] * weights3[2] +  inputs[3] * weights3[3] + bias3]
 
 print(output)
+
+# P.3 The Dot Product
