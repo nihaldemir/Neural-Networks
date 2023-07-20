@@ -13,23 +13,13 @@ print("Matplotlib", matplotlib.__version__)
 # there are 4 neurons that are feeding into this neuron that we are gonna build
 # neurons are outputting some values
 
-inputs = [1, 2, 3, 2.5]
-
 # every unique input is also going to have unique weight associated with it
-
-weights = [0.2, 0.8, -0.5, 1.0]
-
 # every unique neuron has a unique bias
-
-bias = 2
 
 # 1. for a neuron: add up all the inputs times weights plus bias
 
 """
  output = inputs[0] * weights[0] + inputs[1] * weights[1] + inputs[2] * weights[2] +  inputs[3] * weights[3] + bias
-
-print(output)
-
 """
 # P.2 Coding a Layer
 
@@ -39,15 +29,21 @@ print(output)
 # 4 inputs into 3 neurons
 # it means there's going to be 3 unique weight sets (w 4 values) and 3 unique biases
 
-weights2 = [0.5, -0.91, 0.26, -0.5]
-weights3 = [-0.26, -0.27, 0.17, 0.87]
-bias2 = 3
-bias3 = 0.5
+inputs = [1, 2, 3, 2.5]
 
-output = [inputs[0] * weights[0] + inputs[1] * weights[1] + inputs[2] * weights[2] +  inputs[3] * weights[3] + bias,
-          inputs[0] * weights2[0] + inputs[1] * weights2[1] + inputs[2] * weights2[2] +  inputs[3] * weights2[3] + bias2,
-          inputs[0] * weights3[0] + inputs[1] * weights3[1] + inputs[2] * weights3[2] +  inputs[3] * weights3[3] + bias3]
+weights = [[0.2, 0.8, -0.5, 1.0],
+           [0.5, -0.91, 0.26, -0.5],
+           [-0.26, -0.27, 0.17, 0.87]]
 
-print(output)
+biases = [2, 3, 0.5]
 
-# P.3 The Dot Product
+layer_outputs = []
+
+for neuron_weights, neuron_bias in zip(weights, biases):
+    neuron_output = 0
+    for n_input, weight in zip(inputs, neuron_weights):
+        neuron_output += n_input*weight
+    neuron_output += neuron_bias
+    layer_outputs.append(neuron_output)
+
+print(layer_outputs)
