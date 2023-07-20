@@ -47,3 +47,13 @@ for neuron_weights, neuron_bias in zip(weights, biases):
     layer_outputs.append(neuron_output)
 
 print(layer_outputs)
+
+# P.3 Dot Product
+
+# l = [1,5,6,2] shape = (4,) type: 1D array, Vector
+# ll = [[1,5,6,2], [3,2,1,3]] shape = (2,4) type: 2D array, Matrix
+# lll = [[[1,5,6,2],[3,2,1,3]], [[5,2,1,2],[6,4,8,4]],[[2,8,5,3],[1,1,9,4]]] shape = (3,2,4) type = 3D array
+
+"""a tensor is an object that can be represented as an array // not just an array but in the context of 
+doing deep learning in programming a tensor is represented as an array. """
+
